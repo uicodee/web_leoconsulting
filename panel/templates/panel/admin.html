@@ -1,0 +1,47 @@
+{% extends 'panel/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="tabs">
+    <a class="active" href="/panel">Tekshirilgan</a>
+    <a href="pending/">Javob kutmoqda</a>
+    <a href="cancelled/">Bekor qilingan</a>
+</div>
+<ul class="user-list">
+    <li class="user-item">
+        <div class="user__info">
+            <p>
+                <img src="{% static 'images/person.svg' %}" alt=""/>
+                Abduxalilov Abduxalil
+            </p>
+            <p>
+                <img src="{% static 'images/call.svg' %}" alt=""/>
+                +99899 999 99 99
+            </p>
+            <p>
+                <img src="{% static 'images/mail.svg' %}" alt=""/>
+                uicodee@gmail.com
+            </p>
+            <p>
+                <img src="{% static 'images/loc.svg' %}" alt=""/>
+                Fargona, 22.11.2003
+            </p>
+            <p>
+                <img src="{% static 'images/date.svg' %}" alt=""/>
+                22.06.2022 15:44
+            </p>
+        </div>
+        <div class="user__action">
+            <button class="btn check">
+                <img src="{% static 'images/done.svg' %}" alt="">
+            </button>
+            <button class="btn wait">
+                <img src="{% static 'images/time.svg' %}" alt="">
+            </button>
+            <button class="btn cancel">
+                <img src="{% static 'images/close.svg' %}" alt="">
+            </button>
+        </div>
+    </li>
+</ul>
+{% endblock content %}

@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariza jo'natish </title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header__wrapper header__fixed">
+            <header class="container_header header">
+              <button class="menu__btn">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <a href="/" class="logo">
+                <img src="{% static 'images/blue png.png' %}" alt="logo" />
+                <h3>Leo Consulting</h3>
+              </a>
+            </header>
+          </div>
+        <div class="form-mob-top">
+            <img src="{% static 'images/form-mob-top.svg' %}" alt="">
+        </div>
+        <div class="wrapper form__container">
+            <div class="form__illusion">
+                <img src="{% static 'images/form.svg' %}" alt="form">
+            </div>
+            <div class="form__box">
+                <h2 class="form__title">Ariza yuborish</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="double">
+                        <div class="input__control">
+                            {{ form.surname }}
+                            <img src="{% static 'images/person-outline.svg' %}" alt="">
+                        </div>
+                        <div class="input__control">
+                            {{ form.name }}
+                        </div>
+                    </div>
+
+                    <div class="input__control">
+                        {{ form.email }}
+                        <img src="{% static 'images/mail-outline.svg' %}" alt="">
+                    </div>
+                    <div class="double">
+                        <div class="input__control">
+{#                            <select name="loc" id="loc">#}
+{#                                <option value="Fergana">Fergana</option>#}
+{#                                <option value="Fergana">Fergana</option>#}
+{#                                <option value="Fergana">Fergana</option>#}
+{#                                <option value="Fergana">Fergana</option>#}
+{#                                <option value="Fergana">Fergana</option>#}
+{#                            </select>#}
+                            {{ form.region }}
+                            <img src="{% static 'images/navigate-circle-outline 1.svg' %}" alt="">
+                        </div>
+                        <div class="input__control">
+                            {{ form.age }}
+{#                            <input type="text" placeholder="22.11.2003" onfocus="(this.type='date')">#}
+                            <img src="{% static 'images/calendar-outline 1.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="input__control">
+                        {{ form.phone_number }}
+                        <img src="{% static 'images/call-outline 1.svg' %}" alt="">
+                    </div>
+                    <button class="btn form__btn" type="submit">Tasdiqlash</button>
+                </form>
+            </div>
+        </div>
+        <div class="form-mob-bottom">
+            <img src="{% static 'images/form-mob-bot.svg' %}" alt="">
+        </div>
+
+        <div class="form__background">
+            <img src="{% static 'images/form-back.svg' %}" alt="">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Leo Consulting</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<div class="header__wrapper header__fixed">
+    <header class="container header">
+        <button class="menu__btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="#hero" class="logo">
+            <img src="{% static 'images/blue png.png' %}" alt="logo"/>
+            <h3>Leo Consulting</h3>
+        </a>
+        <ul class="navigation">
+            <li><a href="#features">Nega biz?</a></li>
+            <li><a href="#unis">O’quv joylari</a></li>
+            <li><a href="#questions">Savollar</a></li>
+            <li><a href="#social">Ijtimoiy tarmoqlar</a></li>
+            <li><a href="#contact">Call canter</a></li>
+            <li class="hidden close-menu">
+                <button class="btn-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+        </ul>
+    </header>
+</div>
+
+<main class="main">
+    <section class="wrapper section__hero">
+        <div class="container hero" id="hero">
+            <div class="hero__info">
+                <h2 class="hero__info-title">
+                    <span> Bir qadam oldinda. </span> is simply dummy text of the printing
+                    and typesetting industry
+                </h2>
+                <p class="hero__info-description">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    It has roots in a piece
+                </p>
+                <a href="/register" class="btn hero__info-btn">
+                    Hoziroq ro’yxatdan o’tish!
+                </a>
+            </div>
+            <div class="hero__image">
+                <img src="{% static 'images/hero.svg' %}" alt=""/>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper section__features" id="features">
+        <div class="container features">
+            <h2 class="features__title section__title">Nega aynan biz?</h2>
+            <div class="feature__box">
+                <div class="feature__item">
+                    <img src="{% static 'images/Think different-bro 1.svg' %}" alt=""/>
+                    <h3 class="features__item-title">
+                        Biz haqimizda <br/>
+                        yaxshi fikrlar
+                    </h3>
+                    <p class="features__item-desc">
+                        Bizning 99% mijozlarimiz, <br/>
+                        ishimizdan mamnun
+                    </p>
+                </div>
+                <div class="feature__item">
+                    <img src="{% static 'images/Business solution-pana.svg' %}" alt=""/>
+                    <h3 class="features__item-title">
+                        O’z ishimizga <br/>
+                        100% kafolat
+                    </h3>
+                    <p class="features__item-desc">
+                        Xar bir xizmat ko’rsatilgan <br/>
+                        mijozlar, ishni 100 kafolat <br/>
+                        bilan oladi
+                    </p>
+                </div>
+                <div class="feature__item">
+                    <img src="{% static 'images/Safe-amico.svg' %}" alt=""/>
+                    <h3 class="features__item-title">
+                        Ma’lumot <br/>
+                        xavfsizligi
+                    </h3>
+                    <p class="features__item-desc">
+                        Sizning kiritgan xar bir <br/>
+                        ma’lumot katta ma’suliyat <br/>
+                        bilan ximoyalanadi
+                    </p>
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="feature__box-2 swiper-wrapper">
+                    <div class="feature__item swiper-slide">
+                        <img src="{% static 'images/Think different-bro 1.svg' %}" alt=""/>
+                        <h3 class="features__item-title">
+                            Biz haqimizda <br/>
+                            yaxshi fikrlar
+                        </h3>
+                        <p class="features__item-desc">
+                            Bizning 99% mijozlarimiz, <br/>
+                            ishimizdan mamnun
+                        </p>
+                    </div>
+                    <div class="feature__item swiper-slide">
+                        <img src="{% static 'images/Business solution-pana.svg' %}" alt=""/>
+                        <h3 class="features__item-title">
+                            O’z ishimizga <br/>
+                            100% kafolat
+                        </h3>
+                        <p class="features__item-desc">
+                            Xar bir xizmat ko’rsatilgan <br/>
+                            mijozlar, ishni 100 kafolat <br/>
+                            bilan oladi
+                        </p>
+                    </div>
+                    <div class="feature__item swiper-slide">
+                        <img src="{% static 'images/Safe-amico.svg' %}" alt=""/>
+                        <h3 class="features__item-title">
+                            Ma’lumot <br/>
+                            xavfsizligi
+                        </h3>
+                        <p class="features__item-desc">
+                            Sizning kiritgan xar bir <br/>
+                            ma’lumot katta ma’suliyat <br/>
+                            bilan ximoyalanadi
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="feature-back">
+            <img src="{% static 'images/vektor.svg' %}" alt="background"/>
+        </div>
+    </section>
+    <section class="wrapper section__universities" id="unis">
+        <div class="feature-back">
+            <img src="{% static 'images/vektor-top.svg' %}" alt="background"/>
+        </div>
+        <div class="unis container unis-1">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/adygey.jpeg' %}" alt="adygrey"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/kalmish.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/osh.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/siktiiv.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/texno.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="unis container unis-2">
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/adygey.jpeg' %}" alt="adygrey"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/kalmish.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/osh.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/siktiiv.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide unis__card">
+                        <img src="{% static 'images/texno.jpeg' %}" alt="oxforf"/>
+                        <div class="unis__card-info">
+                            <h3 class="unis__card-title">Oxford</h3>
+                            <p class="unis__card-desc">
+                                Angliyada joylashgan eng nufuzli universtetlaridan biri
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper section__questions" id="questions">
+        <div class="container questions">
+            <h2 class="questions__title section__title">
+                Eng ko’p beriladigan savollar
+            </h2>
+            <div class="questions__info">
+                <div class="question__image">
+                    <img src="{% static 'images/faq.svg' %}" alt="faq img"/>
+                </div>
+                <div class="questions__detail">
+                    <div class="questions__box plus">
+                        <button class="btn quiz__toggle">
+                            Qaysi universitetlar bor?
+                            <i class="fa-solid fa-minus icon"></i>
+                        </button>
+                        <div class="quiz__content quiz__active">
+                            <p class="questions__box-desc">
+                                There are many variations of passages of Lorem Ipsum
+                                available, but the majority have suffered alteration in some
+                                form, by injected humour, or randomised words which don't
+                                look even slightly believable
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions__box">
+                        <button class="btn quiz__toggle">
+                            To’lov summasi qancha?
+                            <i class="fa-solid fa-plus icon"></i>
+                        </button>
+                        <div class="quiz__content">
+                            <p class="questions__box-desc">
+                                There are many variations of passages of Lorem Ipsum
+                                available, but the majority have suffered alteration in some
+                                form, by injected humour, or randomised words which don't
+                                look even slightly believable
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions__box">
+                        <button class="btn quiz__toggle">
+                            Diplom O'zbekistonga amal qiladimi?
+                            <i class="fa-solid fa-plus icon"></i>
+                        </button>
+                        <div class="quiz__content">
+                            <p class="questions__box-desc">
+                                There are many variations of passages of Lorem Ipsum
+                                available, but the majority have suffered alteration in some
+                                form, by injected humour, or randomised words which don't
+                                look even slightly believable
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-back">
+            <img src="{% static 'images/faq-back.svg' %}" alt="background"/>
+        </div>
+    </section>
+    <section class="wrapper section__social" id="social">
+        <div class="container social">
+            <div class="social__detail">
+                <h2 class="section__title">Bizning ijtimoiy tarmoqlar</h2>
+                <div class="social__networks">
+                    <a
+                            href="https://www.instagram.com/leo.consultinguz/"
+                            class="instagram"
+                            target="_blank"
+                    >
+                        <img src="{% static 'images/instagram.svg' %}" alt="instagram"/>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://t.me/leo_consulting1" class="telegram" target="_blank">
+                        <img src="{% static 'images/telegram.svg' %}" alt="telegram"/>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="youtube" target="_blank">
+                        <img src="{% static 'images/youtube.svg' %}" alt="youtube"/>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="facebook" target="_blank">
+                        <img src="{% static 'images/facebook.svg' %}" alt="facebook"/>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="twitter" target="_blank">
+                        <img src="{% static 'images/twitter.svg' %}" alt="twitter"/>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="vk" target="_blank">
+                        <img src="{% static 'images/vk.svg' %}" alt="vk"/>
+                        <span>Vkontakte</span>
+                    </a>
+                </div>
+            </div>
+            <div class="social__image">
+                <img src="{% static 'images/media.svg' %}" alt="social media"/>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper section__contact" id="contact">
+        <div class="feature-back">
+            <img src="{% static 'images/social-back.svg' %}" alt="background"/>
+        </div>
+        <div class="container contact">
+            <div class="contact__image">
+                <img src="{% static 'images/Call center-bro 1.svg' %}" alt="calling"/>
+            </div>
+            <div class="contact__info">
+                <h2 class="contact__info-title section__title">
+                    Yana biror bir savol qoldimi?
+                </h2>
+                <p class="contact__info-desc">
+                    Bizga xoziroq qo’ng’iroq qiling va sizga <br/>
+                    kerakli ma’lumotlarni oling!
+                </p>
+                <a class="contact__number" href="tel:+998910014666">+998910014666</a> <br/>
+                <a class="contact__number" href="tel:+998910024666">+998910024666</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer__box">
+        <div class="footer__logo logo">
+            <img src="{% static 'images/blue png.png' %}" alt="logo"/>
+            <h3>Leo Consulting</h3>
+        </div>
+        <div class="footer__social-list">
+            <a href="https://www.instagram.com/leo.consultinguz/" target="_blank">
+                <img src="{% static 'images/instagram-ft.svg' %}" alt="instagram"/>
+            </a>
+            <a href="https://t.me/leo_consulting1" target="_blank">
+                <img src="{% static 'images/telegram-ft.svg' %}" alt="telegram"/>
+            </a>
+            <a href="#" target="_blank">
+                <img src="{% static 'images/youtube-ft.svg' %}" alt="youtube"/>
+            </a>
+            <a href="#" target="_blank">
+                <img src="{% static 'images/facebook-ft.svg' %}" alt="facebook"/>
+            </a>
+            <a href="#" target="_blank">
+                <img src="{% static 'images/twitter-ft.svg' %}" alt="twitter"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    let swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    let swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 70,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    let swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 1,
+        spaceBetween: 70,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
