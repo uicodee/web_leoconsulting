@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Choices
 
 
 class User(models.Model):
@@ -16,6 +17,12 @@ class User(models.Model):
 
 class Application(models.Model):
 
+    statuses = (
+        (0, 'new'),
+        (1, 'pending'),
+        (2, 'cancelled'),
+    )
+
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания', null=True)
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата обновления', null=True)
     name = models.CharField(max_length=50, verbose_name='Имя')
@@ -24,7 +31,7 @@ class Application(models.Model):
     email = models.CharField(max_length=150, verbose_name='Email')
     region = models.CharField(max_length=75, verbose_name='Регион')
     phone_number = models.CharField(max_length=13, verbose_name='Номер телефона')
-    status = models.CharField(max_length=100, null=False, default='new')
+    status = models.CharField(max_length=20, choices=statuses, default='new')
 
 
 class Region(models.Model):

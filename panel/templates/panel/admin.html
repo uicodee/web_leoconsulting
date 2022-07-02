@@ -8,27 +8,28 @@
     <a href="cancelled/">Bekor qilingan</a>
 </div>
 <ul class="user-list">
+    {% for app in apps %}
     <li class="user-item">
         <div class="user__info">
             <p>
                 <img src="{% static 'images/person.svg' %}" alt=""/>
-                Abduxalilov Abduxalil
+                {{ app.surname }} {{ app.name }}
             </p>
             <p>
                 <img src="{% static 'images/call.svg' %}" alt=""/>
-                +99899 999 99 99
+                {{ app.phone_number }}
             </p>
             <p>
                 <img src="{% static 'images/mail.svg' %}" alt=""/>
-                uicodee@gmail.com
+                {{ app.email }}
             </p>
             <p>
                 <img src="{% static 'images/loc.svg' %}" alt=""/>
-                Fargona, 22.11.2003
+                {{ app.region }}, {{ app.age }}
             </p>
             <p>
                 <img src="{% static 'images/date.svg' %}" alt=""/>
-                22.06.2022 15:44
+                {{ app.created_at}}
             </p>
         </div>
         <div class="user__action">
@@ -43,5 +44,6 @@
             </button>
         </div>
     </li>
+    {% endfor %}
 </ul>
 {% endblock content %}
