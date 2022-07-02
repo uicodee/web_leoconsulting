@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Medium.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Medium.woff") format("woff");
+  src: url("../fonts/ProductSans-Medium.woff2") format("woff2"),
+    url("../fonts/ProductSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Regular.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Regular.woff") format("woff");
+  src: url("../fonts/ProductSans-Regular.woff2") format("woff2"),
+    url("../fonts/ProductSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Thin.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Thin.woff") format("woff");
+  src: url("../fonts/ProductSans-Thin.woff2") format("woff2"),
+    url("../fonts/ProductSans-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Black.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Black.woff") format("woff");
+  src: url("../fonts/ProductSans-Black.woff2") format("woff2"),
+    url("../fonts/ProductSans-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Bold.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Bold.woff") format("woff");
+  src: url("../fonts/ProductSans-Bold.woff2") format("woff2"),
+    url("../fonts/ProductSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: "Product Sans";
-  src: url("../../../fonts/ProductSans-Light.woff2") format("woff2"),
-    url("../../../fonts/ProductSans-Light.woff") format("woff");
+  src: url("../fonts/ProductSans-Light.woff2") format("woff2"),
+    url("../fonts/ProductSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -208,7 +208,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   font-size: 2.4rem;
   line-height: 2.9rem;
-  color: #000;
+  color: #a8a8a8;
   appearance: none;
 }
 .input__control {
@@ -274,18 +274,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
   .form__container {
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    transform: translateY(-5rem);
+    transform: unset;
   }
   .form-mob-bottom,
   .form-mob-top {
     display: block;
+    position: relative;
   }
+
   .form__background {
     display: none;
   }
@@ -294,11 +295,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
   }
   .form-mob-top {
-    position: relative;
-    top: -5rem;
+    top: -2rem;
   }
   .form-mob-bottom {
-    transform: translateY(-5rem);
+    bottom: -2rem;
   }
   .form__illusion {
     display: none;

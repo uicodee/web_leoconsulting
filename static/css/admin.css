@@ -1,177 +1,159 @@
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Medium.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Medium.woff2") format("woff2"),
     url("../fonts/ProductSans-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Regular.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Regular.woff2") format("woff2"),
     url("../fonts/ProductSans-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Thin.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Thin.woff2") format("woff2"),
     url("../fonts/ProductSans-Thin.woff") format("woff");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Black.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Black.woff2") format("woff2"),
     url("../fonts/ProductSans-Black.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Bold.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Bold.woff2") format("woff2"),
     url("../fonts/ProductSans-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: url("../fonts/ProductSans-Light.woff2") format("woff2"),
+  font-family: "Product Sans";
+  src: url("../fonts/ProductSans-Light.woff2") format("woff2"),
     url("../fonts/ProductSans-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 html {
-    font-size: 10px;
-    scroll-behavior: smooth;
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
-
 body {
-    font-size: 1.6rem;
-    font-family: "Product Sans";
-    position: relative;
+  font-size: 1.6rem;
+  font-family: "Product Sans";
+  position: relative;
 }
-
 .container {
-    width: 100%;
-    margin: auto;
-    /* min-height: 100vh; */
+  width: 100%;
+  margin: auto;
+  /* min-height: 100vh; */
 }
-
 .list-page {
-    width: 100vw;
-    /* min-height: 100vh; */
-    max-width: 1600px;
+  width: 100vw;
+  /* min-height: 100vh; */
+  max-width: 1600px;
 }
-
 .tabs {
-    margin: 6.5rem auto 4.5rem;
-    height: 5rem;
-    width: 60%;
-    min-width: 30rem;
-    display: flex;
-    align-items: center;
-    background-color: #eeeeef;
-    box-shadow: -3px -3px 15px rgba(0, 0, 0, 0.08),
+  margin: 6.5rem auto 4.5rem;
+  height: 5rem;
+  width: 60%;
+  min-width: 30rem;
+  display: flex;
+  align-items: center;
+  background-color: #eeeeef;
+  box-shadow: -3px -3px 15px rgba(0, 0, 0, 0.08),
     3px 3px 15px rgba(0, 0, 0, 0.08);
-    border-radius: 15px;
+  border-radius: 15px;
 }
-
 .tabs a {
-    width: 50%;
-    height: 4.2rem;
-    text-align: center;
-    font-family: "Product Sans";
-    font-size: 1.6rem;
-    line-height: 2rem;
-    text-decoration: none;
-    color: #000;
-    border-radius: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  height: 4.2rem;
+  text-align: center;
+  font-family: "Product Sans";
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-decoration: none;
+  color: #000;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .tabs a.active {
-    background-color: #fff;
+  background-color: #fff;
 }
-
 .user-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10rem;
-    width: 80%;
-    max-width: 150rem;
-    margin: auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  width: 80%;
+  max-width: 150rem;
+  margin: auto;
 }
-
 .user-item {
-    background: #f2f2f2;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08),
+  background: #f2f2f2;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08),
     -3px -3px 15px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
+  border-radius: 20px;
 }
-
-.user__info {
+.user__info{
     padding: 2.5rem 5rem 0 5rem;
 }
-
 .user__info p {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 1rem 0;
 }
-
 .user__action {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
 }
-
-.user__action button {
+.user__action button{
     width: 100%;
     border: none;
     padding: .5rem 0;
     cursor: pointer;
 }
-
-.check {
+.check{
     background-color: #0CB765;
     border-radius: 0 0 0 2rem;
 }
-
-.wait {
+.wait{
     background-color: #FFE600;
 }
-
-.cancel {
+.cancel{
     background-color: #FF3737;
-    border-radius: 0 0 2rem 0;
+    border-radius: 0 0 2rem  0;
 
 }
-
-.radius {
-    border-radius: 0 0 2rem 2rem;
+.radius{
+  border-radius: 0 0 2rem 2rem;
 }
