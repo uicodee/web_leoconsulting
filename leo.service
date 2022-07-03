@@ -1,0 +1,17 @@
+[Unit]
+Description=My Awesome Telegram Bot
+After=syslog.target
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=2s
+Type=simple
+User=root
+Group=root
+MemoryLimit=1G
+WorkingDirectory=/home/web_leoconsulting
+ExecStart=/home/web_leoconsulting/venv/bin/python -m uvicorn leo_consulting.asg>
+
+[Install]
+WantedBy=multi-user.target
