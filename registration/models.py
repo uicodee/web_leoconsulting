@@ -18,9 +18,14 @@ class User(models.Model):
 class Application(models.Model):
 
     statuses = (
-        (0, 'new'),
-        (1, 'pending'),
-        (2, 'cancelled'),
+        ('new', 'new'),
+        ('pending', 'pending'),
+        ('cancelled', 'cancelled'),
+    )
+
+    sources = (
+        ('telegram', 'telegram'),
+        ('site', 'site'),
     )
 
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания', null=True)
@@ -28,10 +33,10 @@ class Application(models.Model):
     name = models.CharField(max_length=50, verbose_name='Имя')
     surname = models.CharField(max_length=100, verbose_name='Фамилия')
     age = models.IntegerField(verbose_name='Возраст')
-    email = models.CharField(max_length=150, verbose_name='Email')
     region = models.CharField(max_length=75, verbose_name='Регион')
     phone_number = models.CharField(max_length=13, verbose_name='Номер телефона')
     status = models.CharField(max_length=20, choices=statuses, default='new')
+    source = models.CharField(max_length=30, choices=sources, default='site')
 
 
 class Region(models.Model):

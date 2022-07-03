@@ -19,14 +19,14 @@ class RegisterForm(forms.Form):
     age = forms.IntegerField(
         max_value=60,
         min_value=16,
-        label='Возраст'
+        label='Возраст',
+        widget=forms.NumberInput(attrs={"placeholder": "Yosh"})
     )
-    email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={"placeholder": "email@example.com"}))
     region = forms.ModelChoiceField(empty_label=None, label='Регион', queryset=Region.objects.all())
     phone_number = forms.CharField(
         max_length=13,
         min_length=13,
         label='Номер телефона',
-        widget=forms.TextInput(attrs={"placeholder": "+998 (99) 999-99-99"})
+        widget=forms.TextInput(attrs={"placeholder": "Telefon raqamingiz"})
     )
 
