@@ -3,47 +3,63 @@
 
 {% block content %}
 <div class="tabs">
-    <a class="active" href="/panel">Tekshirilgan</a>
+    <a class="active" href="/panel">Yangi</a>
     <a href="pending/">Javob kutmoqda</a>
     <a href="cancelled/">Bekor qilingan</a>
 </div>
 <ul class="user-list">
-    {% for app in apps %}
-    <li class="user-item">
-        <div class="user__info">
-            <p>
-                <img src="{% static 'images/person.svg' %}" alt=""/>
-                {{ app.surname }} {{ app.name }}
-            </p>
-            <p>
-                <img src="{% static 'images/call.svg' %}" alt=""/>
-                {{ app.phone_number }}
-            </p>
-            <p>
-                <img src="{% static 'images/mail.svg' %}" alt=""/>
-                {{ app.email }}
-            </p>
-            <p>
-                <img src="{% static 'images/loc.svg' %}" alt=""/>
-                {{ app.region }}, {{ app.age }}
-            </p>
-            <p>
-                <img src="{% static 'images/date.svg' %}" alt=""/>
-                {{ app.created_at}}
-            </p>
-        </div>
-        <div class="user__action">
-            <button class="btn check">
-                <img src="{% static 'images/done.svg' %}" alt="">
-            </button>
-            <button class="btn wait">
-                <img src="{% static 'images/time.svg' %}" alt="">
-            </button>
-            <button class="btn cancel">
-                <img src="{% static 'images/close.svg' %}" alt="">
-            </button>
-        </div>
-    </li>
-    {% endfor %}
+    {% if not apps %}
+        <p>
+            Yangi arizalar mavjud emas
+        </p>
+    {% else %}
+        {% for app in apps %}
+        <li class="user-item">
+            <div class="user__info">
+                <p>
+                    <img src="{% static 'images/person.svg' %}" alt=""/>
+                    {{ app.surname }} {{ app.name }}
+                </p>
+                <p>
+                    <img src="{% static 'images/call.svg' %}" alt=""/>
+                    {{ app.phone_number }}
+                </p>
+                <p>
+                    <img src="{% static 'images/loc.svg' %}" alt=""/>
+                    {{ app.region }}, {{ app.age }}
+                </p>
+                <p>
+                    <img src="{% static 'images/date.svg' %}" alt=""/>
+                    {{ app.created_at}}
+                </p>
+            </div>
+            <div class="user__action">
+                <a class="btn check" href="/panel/delete/{{ app.id }}">
+                    <img src="{% static 'images/done.svg' %}" alt="">
+                </a>
+                <a class="btn wait" href="/panel/pending/{{ app.id }}">
+                    <img src="{% static 'images/time.svg' %}" alt="">
+                </a>
+                <a class="btn cancel" href="/panel/cancel/{{ app.id }}">
+                    <img src="{% static 'images/close.svg' %}" alt="">
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    {% endif %}
 </ul>
 {% endblock content %}
+{#{% block script %}#}
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>#}
+{#    <script>#}
+{#    $('#set_checked').click(function () {#}
+{#        $.ajax({#}
+{#            url: '/',#}
+{#            method: 'POST',#}
+{#            data: {#}
+{#                #}
+{#            }#}
+{#        })#}
+{#    })#}
+{#    </script>#}
+{#{% endblock script %}#}

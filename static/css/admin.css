@@ -135,12 +135,14 @@ body {
   display: flex;
   align-items: center;
   margin-top: 2rem;
+  text-align: center;
 }
-.user__action button{
+.user__action a {
     width: 100%;
     border: none;
     padding: .5rem 0;
     cursor: pointer;
+    text-align: center;
 }
 .check{
     background-color: #0CB765;

@@ -118,6 +118,9 @@ body {
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08),
     -3px -3px 15px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .user__info{
     padding: 2.5rem 5rem 0 5rem;
@@ -135,8 +138,9 @@ body {
   display: flex;
   align-items: center;
   margin-top: 2rem;
+  text-align: center;
 }
-.user__action button{
+.user__action a {
     width: 100%;
     border: none;
     padding: .5rem 0;

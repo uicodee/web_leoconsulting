@@ -3,39 +3,49 @@
 
 {% block content %}
     <div class="tabs">
-    <a href="/panel">Tekshirilgan</a>
+    <a href="/panel">Yangi</a>
     <a href="/panel/pending">Javob kutmoqda</a>
     <a class="active" href="/panel/cancelled">Bekor qilingan</a>
 </div>
 <ul class="user-list">
-    <li class="user-item">
-        <div class="user__info">
-            <p>
-                <img src="{% static 'images/person.svg' %}" alt=""/>
-                Abduxalilov Abduxalil
-            </p>
-            <p>
-                <img src="{% static 'images/call.svg' %}" alt=""/>
-                +99899 999 99 99
-            </p>
-            <p>
-                <img src="{% static 'images/mail.svg' %}" alt=""/>
-                uicodee@gmail.com
-            </p>
-            <p>
-                <img src="{% static 'images/loc.svg' %}" alt=""/>
-                Fargona, 22.11.2003
-            </p>
-            <p>
-                <img src="{% static 'images/date.svg' %}" alt=""/>
-                22.06.2022 15:44
-            </p>
-        </div>
-        <div class="user__action">
-            <button class="btn cancel radius">
-                <img src="{% static 'images/close.svg' %}" alt="">
-            </button>
-        </div>
-    </li>
+    {% if not apps %}
+        <p>
+            Bekor qilingan arizalar mavjud emas
+        </p>
+    {% else %}
+        {% for app in apps %}
+        <li class="user-item">
+            <div class="user__info">
+                <p>
+                    <img src="{% static 'images/person.svg' %}" alt=""/>
+                    {{ app.surname }} {{ app.name }}
+                </p>
+                <p>
+                    <img src="{% static 'images/call.svg' %}" alt=""/>
+                    {{ app.phone_number }}
+                </p>
+                <p>
+                    <img src="{% static 'images/loc.svg' %}" alt=""/>
+                    {{ app.region }}, {{ app.age }}
+                </p>
+                <p>
+                    <img src="{% static 'images/date.svg' %}" alt=""/>
+                    {{ app.created_at}}
+                </p>
+            </div>
+            <div class="user__action">
+                <a class="btn check" href="/panel/delete/{{ app.id }}">
+                    <img src="{% static 'images/done.svg' %}" alt="">
+                </a>
+                <a class="btn wait" href="/panel/pending/{{ app.id }}">
+                    <img src="{% static 'images/time.svg' %}" alt="">
+                </a>
+                <a class="btn cancel" href="/panel/cancel/{{ app.id }}">
+                    <img src="{% static 'images/close.svg' %}" alt="">
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    {% endif %}
 </ul>
 {% endblock content %}
