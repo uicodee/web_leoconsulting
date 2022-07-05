@@ -118,6 +118,9 @@ body {
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08),
     -3px -3px 15px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .user__info{
     padding: 2.5rem 5rem 0 5rem;
@@ -142,7 +145,6 @@ body {
     border: none;
     padding: .5rem 0;
     cursor: pointer;
-    text-align: center;
 }
 .check{
     background-color: #0CB765;
