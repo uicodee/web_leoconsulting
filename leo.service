@@ -11,7 +11,7 @@ User=root
 Group=root
 MemoryLimit=1G
 WorkingDirectory=/home/web_leoconsulting
-ExecStart=/home/web_leoconsulting/venv/bin/python -m uvicorn leo_consulting.asgi
+ExecStart=/home/web_leoconsulting/venv/bin/python -m uvicorn leo_consulting.asgi:application --uds /tmp/uvicorn.sock
 
 [Install]
 WantedBy=multi-user.target
